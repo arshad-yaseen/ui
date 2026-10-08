@@ -1,6 +1,9 @@
 import { Logo } from "@/components/site/logo";
 import { ParentLink } from "@/components/site/parent-link";
 import type { NavItem } from "@/lib/content";
+import { site } from "@/lib/site";
+import { Button } from "@arshad/ui/components/button";
+import { Icon } from "@arshad/ui/components/icon";
 import { ThemeToggle } from "@arshad/ui/components/theme-toggle";
 import { cn } from "@arshad/ui/lib/cn";
 
@@ -21,7 +24,18 @@ export function Header({ pages }: HeaderProps) {
         <ParentLink pages={pages} className="shrink-0">
           <Logo className="h-5.5" />
         </ParentLink>
-        <ThemeToggle className="rounded-full" />
+        <div className="flex items-center gap-1">
+          <Button
+            variant="plain"
+            color="neutral"
+            aria-label="GitHub"
+            className="rounded-full"
+            render={<a href={site.repository} role="link" />}
+          >
+            <Icon name="GitHub" />
+          </Button>
+          <ThemeToggle className="rounded-full" />
+        </div>
       </div>
     </header>
   );

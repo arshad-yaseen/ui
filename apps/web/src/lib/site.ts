@@ -5,6 +5,7 @@ export const site = {
   title: "arshad/ui",
   description: "A design system for modern interfaces, made with care down to the last detail.",
   url,
+  repository: "https://github.com/arshad-yaseen/ui",
   author: { name: "Arshad Yaseen", url: "https://arshad.fyi" },
   twitter: "@arshadyaseeen",
 } as const;
