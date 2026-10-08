@@ -1,5 +1,5 @@
 import type { Route } from "next";
-import { NavLink } from "@/components/book/nav-link";
+import { NavLink } from "@/components/book/sidebar/nav-link";
 import type { NavGroup } from "@/lib/content";
 import { cn } from "@arshad/ui/lib/cn";
 
