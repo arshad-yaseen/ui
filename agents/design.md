@@ -4,7 +4,7 @@ Tokens, conventions, and composition for building modern, compact interfaces.
 
 Interfaces succeed on hundreds of small decisions. Change a token to change the system. Follow the conventions to keep it coherent. Compose the page so the reader’s job is obvious before the polish is noticed.
 
-Tokens live in the design system's stylesheet. Page chrome reads `--layout-width`, `--layout-padding`, and `--header-height` from the body, so every page shares one edge.
+Tokens live in the design system's stylesheet. Page chrome reads its width, gutter, and header height from variables set once on the body, so every page shares one edge.
 
 These sections decide what to build. `agents/code.md` decides how it is written, and what it is allowed to cost.
 

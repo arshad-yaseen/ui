@@ -13,34 +13,30 @@ How code is written, what it may commit its callers to, and what it may cost. `a
 ## Architecture
 
 - **A workspace of applications and packages.** Applications are deployed, packages are shared. An application depends on packages, a package depends only on packages below it, and nothing depends on an application.
-- **A package exists for code with two consumers.** It declares exactly what it imports, is consumed as source with no build step, and knows nothing about any consumer. Code with one consumer is a folder in that consumer.
+- **A package exists for code with two consumers.** It declares exactly what it imports, is consumed as source with no build step, and knows nothing about any consumer. A new concern with one consumer is a folder in that consumer.
 - **The design system owns the stylesheet and every token.** An application's stylesheet imports it and adds only that application's chrome.
 - **An application is four folders.** `app` is the routes, `content` is the words, `components` is the parts, and `lib` is what is neither: the site's facts, its content model, its helpers. Nothing else sits at the top.
 - **Dependencies flow down.** Routes import anything. Content imports components and `lib`. Components import `lib`. Nothing imports upward, and nothing imports a route. No cycles.
-- **Content mirrors the site.** `content/` holds articles and their indexes, laid out as the URLs are. The page at `/ui/components/button` is written at `content/ui/components/button.tsx`, and the demos it shows sit in `content/ui/components/button/`.
-- **A file and the folder beside it.** `ui.ts` indexes `ui/`, `components.ts` lists `components/`, `button.tsx` shows `button/`. The file is the whole, the folder is its parts. This one idiom is the shape of the entire content tree, and of every compound component.
-- **A book is a root article and sections of articles.** That is the whole content model: `Book`, `Section`, `Article`, in `lib/content.ts`. A section with a page lists its articles there and sits in the sidebar as one link. One without opens on its first article and shows them in the sidebar. `pages(book)` and `nav(book)` derive everything a route, a sidebar, or a sitemap needs.
-- **One route per book.** A book is a layout and an optional catch-all page. The page finds its article in `pages(book)` by href and renders it. Adding a book is those two files and an index.
+- **Content mirrors the site.** `content/` holds articles and their indexes, laid out as the URLs are. The page at `/section/thing` is written at `content/section/thing.tsx`, and what it shows sits in `content/section/thing/`.
+- **One model describes all content.** Every collection of articles, its sections, and its order are plain data in one small model, and everything a route, a navigation, or a sitemap needs is derived from it. Adding a page, a section, or a collection is its file, its folder, and one line in an index. The route, navigation, metadata, and sitemap follow. Nothing about a page is written twice.
+- **One route per collection.** A collection is a layout and a catch-all page that finds its article by URL. Adding one is those two files and an index.
 - **Order is authored.** An index is a hand-written list that imports what it lists, because order is a decision. Nothing is generated from the file system. Code generated from data says so on its first line.
-- **Components take what they show.** A sidebar takes a nav, a pagination takes pages, a list takes items. A component never reaches into `content/`, so the same component serves every book.
+- **Components take what they show.** A sidebar takes a nav, a pagination takes pages, a list takes items. A component never reaches into `content/`, so the same component serves every collection.
 
-## Files
+## Organization
 
-- **A module is a concern, not a function.** `lib/content.ts` holds the content model and what derives from it, `lib/metadata.ts` everything about metadata, `lib/date.ts` everything about dates. A file earns its name by holding one idea whole. It never exists to hold one function.
-- **Components are one per file, grouped by the area they serve.** `components/site/` is the chrome on every page, `components/book/` what a book page is made of, `components/blog/` the blog, `components/home/` the home page. A new area is a new folder.
+Every file sits where someone would look for it, and anything can be removed in one move. Placement is decided by the first three rules, in order.
+
+- **One more of a kind joins its kind.** Before creating a file, find where things of the same kind already live and add the new one there, even when it has a single caller or differs from its neighbours. A difference is the home's to absorb, never a reason for a second home. A new file is for a new concern, never for one more member of an existing one.
+- **A part lives inside what it belongs to.** A file and the folder beside it share a name: `thing.tsx` is the whole, `thing/` holds its parts. A part of one thing sits in that thing's folder, never beside it, because a file's level claims its reach. The folder is never a second level of categories. This one idiom shapes every compound component and the whole content tree.
+- **A new concern sits at the narrowest scope that holds every caller.** One component's folder, one area's folder, one application, or a package once two applications share it. When callers come or go, it moves with them, and it leaves with its last caller.
+- **Removal is the test.** Deleting a thing deletes its file, the folder beside it, and the lines that use or list it. If anything else has to change, its pieces were spread out and belong together.
+- **A module is a concern, not a function.** A file earns its name by holding one idea whole, such as a content model and what derives from it, or everything about dates. It never exists to hold one function.
+- **Components are one per file, grouped by the area they serve,** such as the chrome on every page or what one kind of page is made of. A new area is a new folder.
 - **The kind fixes the extension.** Anything that renders is `.tsx`, everything else is `.ts`.
-- **A folder holds its file's parts and is named after it.** `select/` beside `select.tsx`. It is never a second level of categories.
-- **Types live with what they describe.** Props with the component, the content model with its functions. There is no `types/` folder.
+- **Types live with what they describe.** Props with the component, a model with its functions. There is no `types/` folder.
 - **Tests sit beside what they test.**
-- **No index files, no barrels.** Import the file that defines the thing.
-
-## Growing the site
-
-- **A page.** Write `content/ui/components/thing.tsx` as an `Article`, and add `thing` to the list in `content/ui/components.ts`. The route, sidebar, pagination, metadata, OG image, and sitemap follow.
-- **A demo.** Write `content/ui/components/thing/variant.tsx`, and show it with `<Demo name="ui/components/thing/variant">`.
-- **A section.** Write `content/ui/thing.ts` as a `Section`, with a `thing/` folder of articles beside it, and add it to `sections` in `content/ui.ts`. Give it a `page` to list its articles, or leave it out to open on the first.
-- **A book.** Write `content/thing.ts` as a `Book`, with a `thing/` folder beside it, then `app/thing/layout.tsx` and `app/thing/[[...slug]]/page.tsx`, copied from `app/ui/`.
-- **A post.** Write `content/blog/thing.tsx` as a `DatedArticle`, and add it to `content/blog.ts`.
+- **No `index.ts` files, no barrels.** Import the file that defines the thing.
 
 ## Imports
 
