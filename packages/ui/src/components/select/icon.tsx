@@ -1,5 +1,5 @@
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { ChevronUpDownIcon } from "@arshad/ui/components/select/icons";
+import { Icon as Glyph } from "@arshad/ui/components/icon";
 import { cn } from "@arshad/ui/lib/cn";
 
 export type SelectIconProps = SelectPrimitive.Icon.Props;
@@ -12,7 +12,7 @@ export function Icon({ className, children, ...props }: SelectIconProps) {
       className={cn("-me-0.5 flex items-center justify-center self-center", className)}
       {...props}
     >
-      {children ?? <ChevronUpDownIcon className="size-full" />}
+      {children ?? <Glyph name="ChevronUpDown" className="size-full" />}
     </SelectPrimitive.Icon>
   );
 }

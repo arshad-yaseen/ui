@@ -17,6 +17,10 @@ const icons = {
   ArrowUpRight: <path d="M7.5 16.5 16.5 7.5M9.5 7.5h7v7" />,
   ChevronLeft: <path d="M14 6 9 12l5 6" />,
   ChevronRight: <path d="M10 6l5 6-5 6" />,
+  ChevronUp: <path d="M6 14l6-5 6 5" />,
+  ChevronDown: <path d="M6 10l6 5 6-5" />,
+  ChevronUpDown: <path d="M8.5 16 12 19.5l3.5-3.5M15.5 8 12 4.5 8.5 8" />,
+  Check: <path d="M6 12.75 10.5 17.25 18 6.75" />,
   Plus: <path d="M12 5.5v13M5.5 12h13" />,
   GitHub: (
     <path

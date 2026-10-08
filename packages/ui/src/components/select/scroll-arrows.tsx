@@ -1,5 +1,5 @@
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { ChevronDownIcon, ChevronUpIcon } from "@arshad/ui/components/select/icons";
+import { Icon } from "@arshad/ui/components/icon";
 import { cn } from "@arshad/ui/lib/cn";
 
 const SCROLL_ARROW = cn(
@@ -17,7 +17,7 @@ export function ScrollUpArrow({ className, children, ...props }: SelectScrollUpA
       className={cn(SCROLL_ARROW, "top-0 data-[side=none]:before:-top-full", className)}
       {...props}
     >
-      {children ?? <ChevronUpIcon className="size-4" />}
+      {children ?? <Icon name="ChevronUp" className="size-4" />}
     </SelectPrimitive.ScrollUpArrow>
   );
 }
@@ -31,7 +31,7 @@ export function ScrollDownArrow({ className, children, ...props }: SelectScrollD
       className={cn(SCROLL_ARROW, "bottom-0 data-[side=none]:before:-bottom-full", className)}
       {...props}
     >
-      {children ?? <ChevronDownIcon className="size-4" />}
+      {children ?? <Icon name="ChevronDown" className="size-4" />}
     </SelectPrimitive.ScrollDownArrow>
   );
 }
