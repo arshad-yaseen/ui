@@ -1,5 +1,5 @@
-import { Logo } from "@/components/site/logo";
-import { ParentLink } from "@/components/site/parent-link";
+import { Logo } from "@/components/site/header/logo";
+import { ParentLink } from "@/components/site/header/parent-link";
 import type { NavItem } from "@/lib/content";
 import { site } from "@/lib/site";
 import { Button } from "@arshad/ui/components/button";
