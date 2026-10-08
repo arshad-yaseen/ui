@@ -1,6 +1,12 @@
 import type { ComponentProps, PropsWithChildren } from "react";
 import { cn } from "@arshad/ui/lib/cn";
-import { slugify } from "@arshad/ui/lib/slugify";
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
 
 type HeadingProps = ComponentProps<"h2"> & {
   as: "h2" | "h3";
