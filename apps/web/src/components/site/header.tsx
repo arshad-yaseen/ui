@@ -19,7 +19,7 @@ export function Header({ pages }: HeaderProps) {
     >
       <div className="mx-auto flex h-(--header-height) max-w-(--layout-width) items-center justify-between">
         <ParentLink pages={pages} className="shrink-0">
-          <Logo className="h-6" />
+          <Logo className="h-5.5" />
         </ParentLink>
         <ThemeToggle className="rounded-full" />
       </div>
