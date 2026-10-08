@@ -1,4 +1,6 @@
+import type { CSSProperties } from "react";
 import { Preview } from "@/components/book/preview";
+import background from "@/content/ui/notes/shadows-over-borders/background.webp";
 import { Callout } from "@arshad/ui/components/prose/callout";
 import { InlineCode } from "@arshad/ui/components/prose/inline-code";
 import { P } from "@arshad/ui/components/prose/paragraph";
@@ -49,8 +51,14 @@ function Pill({ className, label }: PillProps) {
 }
 
 function ImageComparison() {
+  // CSSProperties has no key for a custom property such as --background.
+  const style = { "--background": `url(${background.src})` } as CSSProperties;
+
   return (
-    <div className="flex min-h-64 flex-wrap items-center justify-center gap-4 rounded-lg bg-[url(/notes/shadows-over-borders.webp)] bg-cover bg-center p-8">
+    <div
+      style={style}
+      className="flex min-h-64 flex-wrap items-center justify-center gap-4 rounded-lg bg-(image:--background) bg-cover bg-center p-8"
+    >
       <Pill className="border border-neutral-300" label="Border" />
       <Pill className="ring ring-black/10" label="Shadow" />
     </div>
