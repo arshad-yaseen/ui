@@ -18,7 +18,7 @@ export function Hero() {
           "[text-box:trim-both_cap_alphabetic]",
         )}
       >
-        Hundreds of small decisions, made once.
+        Build better interfaces.
       </h1>
 
       <div className="flex flex-col items-start gap-10 md:items-end md:justify-between md:gap-4">

@@ -11,7 +11,7 @@ import { cn } from "@arshad/ui/lib/cn";
 import "@/app/globals.css";
 
 const image = {
-  url: ogImageUrl(site.name, "Hundreds of small decisions, made once."),
+  url: ogImageUrl(site.name, "Build better interfaces."),
   ...OG_SIZE,
   alt: site.description,
 };
