@@ -1,9 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="256" height="256">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2.9 2.9 28.2 28.2" width="256" height="256">
   <style>
-    path { fill: #1a1a17; }
+    circle { fill: #1a1a17; }
     @media (prefers-color-scheme: dark) {
-      path { fill: #ffffff; }
+      circle { fill: #ffffff; }
     }
   </style>
-  <path fill="#1a1a17" d="M0 16h6.5L16 0H9.5Z"/>
+  <circle cx="6" cy="6" r="3.1"/>
+  <circle cx="17" cy="6" r="3.1" opacity="0.16"/>
+  <circle cx="28" cy="6" r="3.1"/>
+  <circle cx="6" cy="17" r="3.1"/>
+  <circle cx="17" cy="17" r="3.1" opacity="0.16"/>
+  <circle cx="28" cy="17" r="3.1"/>
+  <circle cx="6" cy="28" r="3.1"/>
+  <circle cx="17" cy="28" r="3.1"/>
+  <circle cx="28" cy="28" r="3.1"/>
 </svg>
