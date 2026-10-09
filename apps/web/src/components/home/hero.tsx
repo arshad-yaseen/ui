@@ -37,8 +37,12 @@ export function Hero() {
           <Button className="rounded-full" render={<Link href={"/ui" as Route} />}>
             Explore UI
           </Button>
-          <Button variant="outline" className="rounded-full" render={<Link href="/blog" />}>
-            Blog
+          <Button
+            variant="outline"
+            className="rounded-full"
+            render={<a href={site.repository} role="link" />}
+          >
+            GitHub
           </Button>
         </div>
       </div>
