@@ -17,7 +17,7 @@ import { Separator } from "@arshad/ui/components/select/separator";
 import { Trigger } from "@arshad/ui/components/select/trigger";
 import { Value } from "@arshad/ui/components/select/value";
 
-export type SelectProps<
+export type SelectRootProps<
   Value,
   Multiple extends boolean | undefined = false,
 > = SelectPrimitive.Root.Props<Value, Multiple>;
