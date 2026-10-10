@@ -11,7 +11,6 @@ type OgFont = {
   weight: 400 | 600;
 };
 
-/** Satori needs the faces as buffers, not as a stylesheet. */
 export async function loadOgFonts(): Promise<OgFont[]> {
   const [regular, semibold] = await Promise.all([
     readFile(join(FONTS_DIR, "inter-regular.ttf")),
