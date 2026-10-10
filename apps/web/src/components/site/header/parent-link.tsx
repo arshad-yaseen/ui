@@ -29,12 +29,5 @@ export function ParentLink({ pages = [], ...props }: ParentLinkProps) {
   const pathname = usePathname();
   const parent = findParent(pathname, pages);
 
-  return (
-    <Link
-      // Every href in `pages` is a page of this site, which `Route` cannot prove.
-      href={parent.href as Route}
-      aria-label={parent.title}
-      {...props}
-    />
-  );
+  return <Link href={parent.href as Route} aria-label={parent.title} {...props} />;
 }

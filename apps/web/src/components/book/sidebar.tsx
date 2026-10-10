@@ -23,7 +23,6 @@ export function Sidebar({ nav }: SidebarProps) {
             <ul className="flex flex-col gap-1">
               {group.items.map((item) => (
                 <li key={item.href}>
-                  {/* Every href comes from a content index, which `Route` cannot prove. */}
                   <NavLink href={item.href as Route} isExact={item.isExact}>
                     {item.title}
                   </NavLink>

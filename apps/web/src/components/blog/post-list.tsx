@@ -19,7 +19,6 @@ export function PostList({ posts }: PostListProps) {
           >
             {formatDate(post.date, { month: "short" })}
           </time>
-          {/* Every slug here comes from a content index, which `Route` cannot prove. */}
           <Link
             href={`/blog/${post.slug}` as Route}
             className={cn(

@@ -33,7 +33,6 @@ export function Hero() {
         </p>
 
         <div className="flex gap-2">
-          {/* `/ui` is answered by an optional catch-all, which `Route` cannot prove. */}
           <Link href={"/ui" as Route} className={cn(buttonVariants(), "rounded-full")}>
             Explore UI
           </Link>

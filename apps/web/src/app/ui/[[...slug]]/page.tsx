@@ -62,6 +62,5 @@ export default async function UiPage({ params }: PageProps) {
     notFound();
   }
 
-  // Every article href is a page of this route, which `Route` cannot prove.
   redirect(`${href}/${first.slug}` as Route);
 }

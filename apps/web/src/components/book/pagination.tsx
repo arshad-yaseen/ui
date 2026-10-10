@@ -36,7 +36,6 @@ export function Pagination({ pages }: PaginationProps) {
       className="mt-16 flex items-center justify-between gap-4 border-t-hairline border-current/10 pt-6"
     >
       {previous ? (
-        // Every href here comes from a content index, which `Route` cannot prove.
         <Link href={previous.href as Route} className="group flex items-start gap-2">
           <Icon name="ChevronLeft" className={cn(CHEVRON, "-ml-6")} />
           <span className="flex flex-col gap-1">
