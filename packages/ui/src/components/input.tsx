@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@arshad/ui/lib/cn";
-import { Input as BaseInput } from "@base-ui/react/input";
+import { Input as InputPrimitive } from "@base-ui/react/input";
 
 const inputVariants = cva(
   [
@@ -29,8 +29,8 @@ const inputVariants = cva(
   },
 );
 
-export type InputProps = Omit<BaseInput.Props, "size"> & VariantProps<typeof inputVariants>;
+export type InputProps = Omit<InputPrimitive.Props, "size"> & VariantProps<typeof inputVariants>;
 
 export function Input({ size, className, ...props }: InputProps) {
-  return <BaseInput className={cn(inputVariants({ size }), className)} {...props} />;
+  return <InputPrimitive className={cn(inputVariants({ size }), className)} {...props} />;
 }
