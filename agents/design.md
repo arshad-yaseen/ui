@@ -15,7 +15,6 @@ These sections decide what to build. `agents/code.md` decides how it is written,
 - **Gutters are unmistakable.** A wrapped heading or label must never read as bridging into the next column. If adjacent columns can be misread as one line, widen the gutter, shorten the content, or stack.
 - **Open space amplifies the focal object.** An empty rectangle from an underfilled split, an orphaned third item, or delayed proof is a layout failure. Reflow or rebalance.
 - **Unequal findings do not get equal cells.** Rank them, group them, or give the decisive one more width. Geometry matches the argument.
-- **Prose reads at 60 to 70 characters per line.** `max-w-2xl` at prose size is that measure. Evidence gets its section’s full width with the introduction above it, never stranded in a narrow track beside empty columns.
 - **Reflow before shrinking.** Grid and flex children get `min-w-0`. Overflow is never concealed. Short comparisons stack on narrow screens, long tables scroll locally, nothing wraps at the character level.
 
 ## Spacing
@@ -52,21 +51,6 @@ Within a group `1` to `4`, between groups `6` to `8`, between sections `10` and 
 
 ## Typography
 
-Type is tiered by size and color, and emphasized by weight. Thirteen pixels is the body size dense product interfaces settle on, one notch under the browser default, crisp without being small. Every piece of text belongs to a tier, and every tier has a job.
-
-| Tier    | Utility       | Rendered    | Use for                                |
-| ------- | ------------- | ----------- | -------------------------------------- |
-| Control | `text-sm/6`   | 13px / 21px | Buttons, inputs, menu items, labels    |
-| Body    | `text-sm`     | 13px / 20px | Default UI text, table cells           |
-| Meta    | `text-xs`     | 12px        | Descriptions, group labels, timestamps |
-| Micro   | `text-2xs`    | 11px / 16px | Badges, keyboard hints, overlines      |
-| Prose   | `text-base/8` | 16px / 28px | Long form reading, docs                |
-| Heading | `text-lg`     | 18px        | Section titles (h2)                    |
-| Title   | `text-2xl`    | 24px        | Page titles (h1)                       |
-| Display | `text-3xl+`   | 30px and up | Long form and hero titles              |
-
-Numeric leadings like `/6` ride the spacing scale, so line heights compact with everything else. Long form prose is the exception and keeps a leading near 1.75 however dense the chrome gets.
-
 - **Hierarchy comes from type first.** Tier, weight, and color before a surface, a border, or an accent.
 - **Emphasize with weight and color, never a size bump.** Nothing renders lighter than 400, headings sit between 500 and 600.
 - **Peers share a tier.** Never resize one because its string is longer or its number bigger. Rewrite before shrinking, and fix a stranded word by changing the copy or the measure, never by shrinking that element.
@@ -82,8 +66,6 @@ Numeric leadings like `/6` ride the spacing scale, so line heights compact with 
 - **Glue terms together.** A non breaking space keeps units, shortcuts, and compound names on one line, and a number takes a space before its unit, 10 MB not 10MB.
 
 ## Radius
-
-Radii are fixed rem tokens and do not scale with spacing. A control wants a radius near one fifth of its height, 5px on a 28px control, which is `rounded-md`. Cards and previews step up to 8px with `rounded-lg`, floating surfaces sit just above. Larger surface, larger radius.
 
 Nested corners are concentric, bending around one shared center. Inner radius equals outer radius minus the gap between the edges, outer equals inner plus that gap. A 5px item resting 3.5px inside a popup asks for an 8.5px popup corner. Derive these from the radius and spacing tokens rather than writing the number, so they stay correct when either token changes.
 
