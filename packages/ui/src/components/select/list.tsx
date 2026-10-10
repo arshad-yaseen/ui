@@ -9,7 +9,7 @@ export function List({ className, ...props }: SelectListProps) {
       data-slot="select-list"
       className={cn(
         "relative max-h-(--available-height) py-1",
-        "scroll-py-7 overflow-y-auto overscroll-contain",
+        "scroll-py-(--select-scroll-arrow-height) overflow-y-auto overscroll-contain",
         className,
       )}
       {...props}

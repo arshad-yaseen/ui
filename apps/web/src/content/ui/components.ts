@@ -1,5 +1,6 @@
 import { avatar } from "@/content/ui/components/avatar";
 import { button } from "@/content/ui/components/button";
+import { dialog } from "@/content/ui/components/dialog";
 import { input } from "@/content/ui/components/input";
 import { loaders } from "@/content/ui/components/loaders";
 import { select } from "@/content/ui/components/select";
@@ -9,5 +10,5 @@ import type { Section } from "@/lib/content";
 export const components: Section = {
   slug: "components",
   title: "Components",
-  articles: [button, input, textarea, select, avatar, loaders],
+  articles: [button, input, textarea, select, dialog, avatar, loaders],
 };

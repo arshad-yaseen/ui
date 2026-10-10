@@ -9,9 +9,10 @@ export function Popup({ className, ...props }: SelectPopupProps) {
       data-slot="select-popup"
       className={cn(
         "group/popup relative min-w-(--anchor-width) origin-(--transform-origin)",
+        "[--select-scroll-arrow-height:--spacing(7)]",
         "overflow-hidden rounded-[calc(var(--radius-md)+--spacing(1))] bg-clip-padding outline-hidden",
         "bg-background text-foreground",
-        "shadow-lg ring shadow-black/5 ring-black/10 dark:shadow-black/40 dark:ring-white/10",
+        "shadow-lg ring shadow-black/5 ring-black/10 dark:shadow-black/40 dark:ring-white/8",
         "transition-[scale,opacity] duration-100 ease-out motion-reduce:transition-none",
         "data-starting-style:scale-[0.98] data-starting-style:opacity-0",
         "data-ending-style:scale-[0.98] data-ending-style:opacity-0 data-ending-style:duration-75",
