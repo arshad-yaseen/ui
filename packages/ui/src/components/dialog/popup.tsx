@@ -13,13 +13,12 @@ export function Popup({ className, ...props }: DialogPopupProps) {
         "overflow-y-auto overscroll-contain outline-hidden",
         "rounded-xl bg-background text-sm text-foreground",
         "shadow-lg ring shadow-black/5 ring-black/10 dark:shadow-black/40 dark:ring-white/8",
-        "translate-y-[calc(--spacing(5)*var(--nested-dialogs))] scale-[calc(1-0.1*var(--nested-dialogs))]",
-        "after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:opacity-0",
-        "after:bg-black/5 data-nested-dialog-open:after:opacity-100 dark:after:bg-black/40",
-        "transition-[translate,scale,opacity] duration-200 ease-out motion-reduce:transition-none",
-        "after:transition-opacity after:duration-200 after:ease-out motion-reduce:after:transition-none",
+        "scale-[calc(1-0.05*var(--nested-dialogs))]",
+        "transition-[scale,opacity] duration-200 ease-out motion-reduce:transition-none",
+        "*:transition-opacity *:duration-200 *:ease-out data-nested-dialog-open:*:opacity-0 motion-reduce:*:transition-none",
         "data-starting-style:scale-95 data-starting-style:opacity-0",
         "data-ending-style:scale-95 data-ending-style:opacity-0 data-ending-style:duration-150",
+        "data-nested:data-ending-style:scale-105 data-nested:data-starting-style:scale-105",
         className,
       )}
       {...props}
