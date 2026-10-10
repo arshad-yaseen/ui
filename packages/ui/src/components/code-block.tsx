@@ -15,7 +15,6 @@ const UNLOCK_DELAY = 150;
 
 const DEFAULT_LANG: LanguageName = "typescript";
 
-// Sugar High's Vercel theme.
 const THEME = {
   "--sh-class": "light-dark(#107d32, #00ca52)",
   "--sh-identifier": "light-dark(#171717, #ededed)",
@@ -70,7 +69,7 @@ export function CodeBlock({
       "data-slot": "code-block",
       ...props,
       className: cn(
-        "max-h-120 overflow-auto rounded-lg p-4 text-sm/6",
+        "max-h-80 overflow-auto rounded-lg p-4 text-sm/6",
         "border-hairline border-current/10",
         "[&_pre]:focus-visible:outline-hidden",
         className,
