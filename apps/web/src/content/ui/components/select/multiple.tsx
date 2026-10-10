@@ -27,16 +27,20 @@ export function Multiple() {
         <Select.Value>{renderValue}</Select.Value>
         <Select.Icon />
       </Select.Trigger>
-      <Select.Popup alignItemWithTrigger={false}>
-        <Select.List>
-          {languages.map((language) => (
-            <Select.Item key={language.value} value={language.value}>
-              <Select.ItemIndicator />
-              <Select.ItemText>{language.label}</Select.ItemText>
-            </Select.Item>
-          ))}
-        </Select.List>
-      </Select.Popup>
+      <Select.Portal>
+        <Select.Positioner alignItemWithTrigger={false}>
+          <Select.Popup>
+            <Select.List>
+              {languages.map((language) => (
+                <Select.Item key={language.value} value={language.value}>
+                  <Select.ItemIndicator />
+                  <Select.ItemText>{language.label}</Select.ItemText>
+                </Select.Item>
+              ))}
+            </Select.List>
+          </Select.Popup>
+        </Select.Positioner>
+      </Select.Portal>
     </Select.Root>
   );
 }

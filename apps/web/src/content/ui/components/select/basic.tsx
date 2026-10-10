@@ -13,18 +13,22 @@ export function Basic() {
         <Select.Value placeholder="Select a font" />
         <Select.Icon />
       </Select.Trigger>
-      <Select.Popup>
-        <Select.ScrollUpArrow />
-        <Select.List>
-          {fonts.map((font) => (
-            <Select.Item key={font.value} value={font.value}>
-              <Select.ItemIndicator />
-              <Select.ItemText>{font.label}</Select.ItemText>
-            </Select.Item>
-          ))}
-        </Select.List>
-        <Select.ScrollDownArrow />
-      </Select.Popup>
+      <Select.Portal>
+        <Select.Positioner>
+          <Select.Popup>
+            <Select.ScrollUpArrow />
+            <Select.List>
+              {fonts.map((font) => (
+                <Select.Item key={font.value} value={font.value}>
+                  <Select.ItemIndicator />
+                  <Select.ItemText>{font.label}</Select.ItemText>
+                </Select.Item>
+              ))}
+            </Select.List>
+            <Select.ScrollDownArrow />
+          </Select.Popup>
+        </Select.Positioner>
+      </Select.Portal>
     </Select.Root>
   );
 }

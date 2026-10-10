@@ -15,16 +15,20 @@ export function Disabled() {
           <Select.Value />
           <Select.Icon />
         </Select.Trigger>
-        <Select.Popup>
-          <Select.List>
-            {plans.map((plan) => (
-              <Select.Item key={plan.value} value={plan.value}>
-                <Select.ItemIndicator />
-                <Select.ItemText>{plan.label}</Select.ItemText>
-              </Select.Item>
-            ))}
-          </Select.List>
-        </Select.Popup>
+        <Select.Portal>
+          <Select.Positioner>
+            <Select.Popup>
+              <Select.List>
+                {plans.map((plan) => (
+                  <Select.Item key={plan.value} value={plan.value}>
+                    <Select.ItemIndicator />
+                    <Select.ItemText>{plan.label}</Select.ItemText>
+                  </Select.Item>
+                ))}
+              </Select.List>
+            </Select.Popup>
+          </Select.Positioner>
+        </Select.Portal>
       </Select.Root>
 
       {/* A single option is disabled. */}
@@ -33,20 +37,24 @@ export function Disabled() {
           <Select.Value />
           <Select.Icon />
         </Select.Trigger>
-        <Select.Popup>
-          <Select.List>
-            {plans.map((plan) => (
-              <Select.Item
-                key={plan.value}
-                value={plan.value}
-                disabled={plan.value === "enterprise"}
-              >
-                <Select.ItemIndicator />
-                <Select.ItemText>{plan.label}</Select.ItemText>
-              </Select.Item>
-            ))}
-          </Select.List>
-        </Select.Popup>
+        <Select.Portal>
+          <Select.Positioner>
+            <Select.Popup>
+              <Select.List>
+                {plans.map((plan) => (
+                  <Select.Item
+                    key={plan.value}
+                    value={plan.value}
+                    disabled={plan.value === "enterprise"}
+                  >
+                    <Select.ItemIndicator />
+                    <Select.ItemText>{plan.label}</Select.ItemText>
+                  </Select.Item>
+                ))}
+              </Select.List>
+            </Select.Popup>
+          </Select.Positioner>
+        </Select.Portal>
       </Select.Root>
     </div>
   );

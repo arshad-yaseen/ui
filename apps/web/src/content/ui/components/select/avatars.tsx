@@ -27,16 +27,20 @@ export function Avatars() {
         <Select.Value />
         <Select.Icon />
       </Select.Trigger>
-      <Select.Popup>
-        <Select.List>
-          {items.map((item) => (
-            <Select.Item key={item.value} value={item.value}>
-              <Select.ItemIndicator />
-              <Select.ItemText>{item.label}</Select.ItemText>
-            </Select.Item>
-          ))}
-        </Select.List>
-      </Select.Popup>
+      <Select.Portal>
+        <Select.Positioner>
+          <Select.Popup>
+            <Select.List>
+              {items.map((item) => (
+                <Select.Item key={item.value} value={item.value}>
+                  <Select.ItemIndicator />
+                  <Select.ItemText>{item.label}</Select.ItemText>
+                </Select.Item>
+              ))}
+            </Select.List>
+          </Select.Popup>
+        </Select.Positioner>
+      </Select.Portal>
     </Select.Root>
   );
 }

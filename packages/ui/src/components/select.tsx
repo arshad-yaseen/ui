@@ -9,6 +9,8 @@ import { ItemText } from "@arshad/ui/components/select/item-text";
 import { Label } from "@arshad/ui/components/select/label";
 import { List } from "@arshad/ui/components/select/list";
 import { Popup } from "@arshad/ui/components/select/popup";
+import { Portal } from "@arshad/ui/components/select/portal";
+import { Positioner } from "@arshad/ui/components/select/positioner";
 import { ScrollDownArrow } from "@arshad/ui/components/select/scroll-down-arrow";
 import { ScrollUpArrow } from "@arshad/ui/components/select/scroll-up-arrow";
 import { Separator } from "@arshad/ui/components/select/separator";
@@ -26,6 +28,8 @@ export const Select = {
   Trigger,
   Value,
   Icon,
+  Portal,
+  Positioner,
   Popup,
   List,
   Item,

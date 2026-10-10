@@ -26,24 +26,28 @@ export function Grouped() {
         <Select.Value placeholder="Select produce" />
         <Select.Icon />
       </Select.Trigger>
-      <Select.Popup>
-        <Select.List>
-          {groups.map((group, index) => (
-            <Fragment key={group.value}>
-              <Select.Group>
-                <Select.GroupLabel>{group.value}</Select.GroupLabel>
-                {group.items.map((item) => (
-                  <Select.Item key={item.value} value={item.value}>
-                    <Select.ItemIndicator />
-                    <Select.ItemText>{item.label}</Select.ItemText>
-                  </Select.Item>
-                ))}
-              </Select.Group>
-              {index < groups.length - 1 && <Select.Separator />}
-            </Fragment>
-          ))}
-        </Select.List>
-      </Select.Popup>
+      <Select.Portal>
+        <Select.Positioner>
+          <Select.Popup>
+            <Select.List>
+              {groups.map((group, index) => (
+                <Fragment key={group.value}>
+                  <Select.Group>
+                    <Select.GroupLabel>{group.value}</Select.GroupLabel>
+                    {group.items.map((item) => (
+                      <Select.Item key={item.value} value={item.value}>
+                        <Select.ItemIndicator />
+                        <Select.ItemText>{item.label}</Select.ItemText>
+                      </Select.Item>
+                    ))}
+                  </Select.Group>
+                  {index < groups.length - 1 && <Select.Separator />}
+                </Fragment>
+              ))}
+            </Select.List>
+          </Select.Popup>
+        </Select.Positioner>
+      </Select.Portal>
     </Select.Root>
   );
 }

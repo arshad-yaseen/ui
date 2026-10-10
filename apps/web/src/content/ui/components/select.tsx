@@ -79,22 +79,16 @@ export const select = {
       <H3>Select.Trigger</H3>
       <PropsTable rows={[{ name: "size", type: '"sm" | "md" | "lg"', default: '"md"' }]} />
 
-      <H3>Select.Popup</H3>
-      <PropsTable
-        rows={[
-          { name: "sideOffset", type: "number", default: "4" },
-          { name: "side", type: '"top" | "bottom" | "left" | "right"', default: '"bottom"' },
-          { name: "align", type: '"start" | "center" | "end"', default: '"center"' },
-          { name: "alignItemWithTrigger", type: "boolean", default: "true" },
-          { name: "container", type: "HTMLElement | Ref | null" },
-        ]}
-      />
+      <H3>Select.Positioner</H3>
+      <PropsTable rows={[{ name: "sideOffset", type: "number", default: "4" }]} />
       <P>
         Plus everything from{" "}
         <A href="https://base-ui.com/react/components/select">Base UI Select</A>, including{" "}
         <InlineCode>items</InlineCode>, <InlineCode>value</InlineCode>,{" "}
-        <InlineCode>defaultValue</InlineCode>, and <InlineCode>onValueChange</InlineCode>.{" "}
-        <InlineCode>Select.Popup</InlineCode> forwards the remaining positioner props.
+        <InlineCode>defaultValue</InlineCode>, and <InlineCode>onValueChange</InlineCode>. Each part
+        wraps the Base UI part of the same name, so <InlineCode>alignItemWithTrigger</InlineCode>,{" "}
+        <InlineCode>side</InlineCode>, and the other positioning props go on{" "}
+        <InlineCode>Select.Positioner</InlineCode>.
       </P>
     </>
   ),

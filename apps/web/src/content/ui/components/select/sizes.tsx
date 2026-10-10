@@ -17,16 +17,20 @@ export function Sizes() {
             <Select.Value />
             <Select.Icon />
           </Select.Trigger>
-          <Select.Popup>
-            <Select.List>
-              {themes.map((theme) => (
-                <Select.Item key={theme.value} value={theme.value}>
-                  <Select.ItemIndicator />
-                  <Select.ItemText>{theme.label}</Select.ItemText>
-                </Select.Item>
-              ))}
-            </Select.List>
-          </Select.Popup>
+          <Select.Portal>
+            <Select.Positioner>
+              <Select.Popup>
+                <Select.List>
+                  {themes.map((theme) => (
+                    <Select.Item key={theme.value} value={theme.value}>
+                      <Select.ItemIndicator />
+                      <Select.ItemText>{theme.label}</Select.ItemText>
+                    </Select.Item>
+                  ))}
+                </Select.List>
+              </Select.Popup>
+            </Select.Positioner>
+          </Select.Portal>
         </Select.Root>
       ))}
     </div>

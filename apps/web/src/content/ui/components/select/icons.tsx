@@ -38,16 +38,20 @@ export function Icons() {
         <Select.Value />
         <Select.Icon />
       </Select.Trigger>
-      <Select.Popup>
-        <Select.List>
-          {appearances.map((appearance) => (
-            <Select.Item key={appearance.value} value={appearance.value}>
-              <Select.ItemIndicator />
-              <Select.ItemText>{appearance.label}</Select.ItemText>
-            </Select.Item>
-          ))}
-        </Select.List>
-      </Select.Popup>
+      <Select.Portal>
+        <Select.Positioner>
+          <Select.Popup>
+            <Select.List>
+              {appearances.map((appearance) => (
+                <Select.Item key={appearance.value} value={appearance.value}>
+                  <Select.ItemIndicator />
+                  <Select.ItemText>{appearance.label}</Select.ItemText>
+                </Select.Item>
+              ))}
+            </Select.List>
+          </Select.Popup>
+        </Select.Positioner>
+      </Select.Portal>
     </Select.Root>
   );
 }

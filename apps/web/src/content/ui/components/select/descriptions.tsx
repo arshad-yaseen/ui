@@ -13,17 +13,21 @@ export function Descriptions() {
         <Select.Value placeholder="Select a plan" />
         <Select.Icon />
       </Select.Trigger>
-      <Select.Popup alignItemWithTrigger={false}>
-        <Select.List>
-          {plans.map((plan) => (
-            <Select.Item key={plan.value} value={plan.value}>
-              <Select.ItemIndicator />
-              <Select.ItemText>{plan.label}</Select.ItemText>
-              <Select.ItemDescription>{plan.description}</Select.ItemDescription>
-            </Select.Item>
-          ))}
-        </Select.List>
-      </Select.Popup>
+      <Select.Portal>
+        <Select.Positioner alignItemWithTrigger={false}>
+          <Select.Popup>
+            <Select.List>
+              {plans.map((plan) => (
+                <Select.Item key={plan.value} value={plan.value}>
+                  <Select.ItemIndicator />
+                  <Select.ItemText>{plan.label}</Select.ItemText>
+                  <Select.ItemDescription>{plan.description}</Select.ItemDescription>
+                </Select.Item>
+              ))}
+            </Select.List>
+          </Select.Popup>
+        </Select.Positioner>
+      </Select.Portal>
     </Select.Root>
   );
 }

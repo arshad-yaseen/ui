@@ -13,16 +13,20 @@ export function Invalid() {
         <Select.Value placeholder="Select a size" />
         <Select.Icon />
       </Select.Trigger>
-      <Select.Popup>
-        <Select.List>
-          {sizes.map((size) => (
-            <Select.Item key={size.value} value={size.value}>
-              <Select.ItemIndicator />
-              <Select.ItemText>{size.label}</Select.ItemText>
-            </Select.Item>
-          ))}
-        </Select.List>
-      </Select.Popup>
+      <Select.Portal>
+        <Select.Positioner>
+          <Select.Popup>
+            <Select.List>
+              {sizes.map((size) => (
+                <Select.Item key={size.value} value={size.value}>
+                  <Select.ItemIndicator />
+                  <Select.ItemText>{size.label}</Select.ItemText>
+                </Select.Item>
+              ))}
+            </Select.List>
+          </Select.Popup>
+        </Select.Positioner>
+      </Select.Portal>
     </Select.Root>
   );
 }
