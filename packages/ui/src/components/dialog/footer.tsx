@@ -11,7 +11,7 @@ export function Footer({ render, className, ...props }: DialogFooterProps) {
     props: {
       "data-slot": "dialog-footer",
       ...props,
-      className: cn("flex justify-end gap-3 px-(--dialog-padding)", className),
+      className: cn("flex flex-wrap justify-end gap-3 px-(--dialog-padding)", className),
     },
   });
 }
