@@ -140,5 +140,5 @@ Every export is an API. The lower it sits, the more places call it, and the less
 
 - **A comment carries a constraint, a workaround, or a decision the code cannot show.** Nothing else. Plain sentences. No commented-out code, no journals. JSDoc only where the type falls short.
 - **One change, one purpose.** The tree compiles at every commit, and callers update with the API they use.
-- **Commit messages follow Go.** `area: what changed`, lowercase, imperative, under seventy-two characters. A short body only when the subject cannot say why. No attribution trailers, no tool links.
+- **Commit messages are plain.** What changed, lowercase and imperative, under seventy-two characters, such as `replace the logo with a slash`. No area prefix, no conventional type or scope. A short body only when the subject cannot say why. No attribution trailers, no tool links.
 - **Delete, do not deprecate.** Unused code and dependencies are removed.
