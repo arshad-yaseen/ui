@@ -1,7 +1,7 @@
 import type { Route } from "next";
 import Link from "next/link";
 import { site } from "@/lib/site";
-import { Button } from "@arshad/ui/components/button";
+import { buttonVariants } from "@arshad/ui/components/button";
 import { cn } from "@arshad/ui/lib/cn";
 
 export function Hero() {
@@ -34,16 +34,15 @@ export function Hero() {
 
         <div className="flex gap-2">
           {/* `/ui` is answered by an optional catch-all, which `Route` cannot prove. */}
-          <Button className="rounded-full" render={<Link href={"/ui" as Route} />}>
+          <Link href={"/ui" as Route} className={cn(buttonVariants(), "rounded-full")}>
             Explore UI
-          </Button>
-          <Button
-            variant="outline"
-            className="rounded-full"
-            render={<a href={site.repository} role="link" />}
+          </Link>
+          <a
+            href={site.repository}
+            className={cn(buttonVariants({ variant: "outline" }), "rounded-full")}
           >
             GitHub
-          </Button>
+          </a>
         </div>
       </div>
     </section>

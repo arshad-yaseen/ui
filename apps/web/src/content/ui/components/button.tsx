@@ -67,8 +67,8 @@ export const button = {
 
       <H2>Link</H2>
       <P>
-        Pass an element to <InlineCode>render</InlineCode> to render the button as something else,
-        like a link. Native button semantics are dropped automatically.
+        A link keeps its own semantics and takes the button look from{" "}
+        <InlineCode>buttonVariants</InlineCode>, which accepts the same variants.
       </P>
       <Demo name="ui/components/button/as-link">
         <AsLink />
@@ -81,7 +81,7 @@ export const button = {
           {
             name: "color",
             type: '"neutral" | "dark/white" | "accent" | "success" | "danger"',
-            default: '"dark/white"',
+            default: '"dark/white" when solid, "neutral" otherwise',
           },
           { name: "size", type: '"sm" | "md" | "lg"', default: '"md"' },
           { name: "isElevated", type: "boolean", default: "false" },

@@ -1,8 +1,8 @@
+import { Button as ButtonPrimitive } from "@base-ui/react/button";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@arshad/ui/lib/cn";
-import { Button as BaseUIButton } from "@base-ui/react";
 
-const buttonVariants = cva(
+const buttonRecipe = cva(
   [
     "relative isolate inline-flex items-center justify-center gap-x-2 rounded-md font-medium",
     "cursor-default touch-manipulation [a]:cursor-pointer",
@@ -85,7 +85,6 @@ const buttonVariants = cva(
       },
     ],
     defaultVariants: {
-      variant: "solid",
       size: "md",
     },
   },
@@ -99,41 +98,25 @@ const DEFAULT_COLOR_BY_VARIANT = {
   plain: "neutral",
 } as const;
 
-export type ButtonProps = BaseUIButton.Props & VariantProps<typeof buttonVariants>;
+export type ButtonVariants = VariantProps<typeof buttonRecipe>;
 
-export function Button({
-  children,
-  size,
-  variant,
-  color,
-  isElevated,
-  className,
-  type,
-  nativeButton,
-  render,
-  ...props
-}: ButtonProps) {
+export function buttonVariants({ variant, color, ...variants }: ButtonVariants = {}) {
   const resolvedVariant = variant ?? DEFAULT_VARIANT;
-  const resolvedColor = color ?? DEFAULT_COLOR_BY_VARIANT[resolvedVariant];
-  const isNativeButton = nativeButton ?? !render;
 
+  return buttonRecipe({
+    ...variants,
+    variant: resolvedVariant,
+    color: color ?? DEFAULT_COLOR_BY_VARIANT[resolvedVariant],
+  });
+}
+
+export type ButtonProps = ButtonPrimitive.Props & ButtonVariants;
+
+export function Button({ variant, color, size, isElevated, className, ...props }: ButtonProps) {
   return (
-    <BaseUIButton
-      type={isNativeButton ? (type ?? "button") : type}
-      nativeButton={isNativeButton}
-      render={render}
+    <ButtonPrimitive
       {...props}
-      className={cn(
-        buttonVariants({
-          size,
-          color: resolvedColor,
-          variant: resolvedVariant,
-          isElevated,
-        }),
-        className,
-      )}
-    >
-      {children}
-    </BaseUIButton>
+      className={cn(buttonVariants({ variant, color, size, isElevated }), className)}
+    />
   );
 }

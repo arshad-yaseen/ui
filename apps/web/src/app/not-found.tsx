@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/site/header";
-import { Button } from "@arshad/ui/components/button";
+import { buttonVariants } from "@arshad/ui/components/button";
 import { P } from "@arshad/ui/components/prose/paragraph";
+import { cn } from "@arshad/ui/lib/cn";
 
 export const metadata: Metadata = {
   title: "Page not found",
@@ -20,9 +21,9 @@ export default function NotFound() {
               Check the address for a typo, or start again from the home page.
             </P>
           </div>
-          <Button className="rounded-full" render={<Link href="/" />}>
+          <Link href="/" className={cn(buttonVariants(), "rounded-full")}>
             Go home
-          </Button>
+          </Link>
         </div>
       </main>
     </>
