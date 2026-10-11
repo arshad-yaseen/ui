@@ -28,6 +28,7 @@ export function NavLink<T extends string>({ href, isExact, children }: NavLinkPr
         !isActive && [
           "[--plain-fg:var(--color-neutral-600)] dark:[--plain-fg:var(--color-neutral-400)]",
           "hover-open:[--plain-fg:var(--color-neutral-900)] dark:hover-open:[--plain-fg:var(--color-white)]",
+          "forced-colors:border-0",
         ],
       )}
     >
