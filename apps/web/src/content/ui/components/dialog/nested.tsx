@@ -1,8 +1,5 @@
 import { buttonVariants } from "@arshad/ui/components/button";
 import { Dialog } from "@arshad/ui/components/dialog";
-import { Icon } from "@arshad/ui/components/icon";
-
-const features = ["Unlimited projects", "Up to 10 members", "Priority support"];
 
 export function Nested() {
   return (
@@ -18,14 +15,6 @@ export function Nested() {
               <Dialog.Title>Pro plan</Dialog.Title>
               <Dialog.Description>Billed monthly and renews automatically.</Dialog.Description>
             </Dialog.Header>
-            <Dialog.Body render={<ul />} className="flex flex-col gap-2">
-              {features.map((feature) => (
-                <li key={feature} className="flex items-center gap-2">
-                  <Icon name="Check" className="size-4 text-neutral-500 dark:text-neutral-400" />
-                  {feature}
-                </li>
-              ))}
-            </Dialog.Body>
             <Dialog.Footer>
               <Dialog.Root>
                 <Dialog.Trigger className={buttonVariants({ variant: "outline" })}>
