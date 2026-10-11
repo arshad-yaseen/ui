@@ -12,7 +12,8 @@
     "typecheck": "turbo run typecheck",
     "lint": "oxlint",
     "format": "oxfmt",
-    "generate": "turbo run generate"
+    "generate": "turbo run generate",
+    "screenshot": "bun run --cwd packages/ui screenshot"
   },
   "devDependencies": {
     "oxfmt": "^0.66.0",

@@ -5,7 +5,7 @@ import { Input as InputPrimitive } from "@base-ui/react/input";
 const inputVariants = cva(
   [
     "block w-full rounded-md bg-transparent text-foreground",
-    "ring ring-black/15 not-data-disabled:shadow-sm dark:ring-white/12",
+    "ring ring-black/15 not-data-disabled:shadow-sm dark:ring-white/12 forced-colors:border",
     "not-data-disabled:not-data-invalid:hover:ring-black/25 dark:not-data-disabled:not-data-invalid:hover:ring-white/20",
     "data-invalid:not-data-disabled:hover:ring-danger-500/70",
     "placeholder:text-neutral-600 dark:placeholder:text-neutral-400",

@@ -5,6 +5,7 @@ import { cn } from "@arshad/ui/lib/cn";
 const buttonRecipe = cva(
   [
     "relative isolate inline-flex items-center justify-center gap-x-2 rounded-md font-medium",
+    "forced-colors:border",
     "cursor-default touch-manipulation [a]:cursor-pointer",
     "focus:not-focus-visible:outline-hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
     "data-disabled:cursor-not-allowed data-disabled:opacity-50",

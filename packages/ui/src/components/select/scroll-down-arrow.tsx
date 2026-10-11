@@ -9,7 +9,7 @@ export function ScrollDownArrow({ className, children, ...props }: SelectScrollD
     <SelectPrimitive.ScrollDownArrow
       data-slot="select-scroll-down-arrow"
       className={cn(
-        "bottom-0 z-1 flex h-7 w-full cursor-default items-center justify-center",
+        "bottom-0 z-1 flex h-(--select-scroll-arrow-height) w-full cursor-default items-center justify-center",
         "bg-background text-neutral-500 dark:text-neutral-400",
         "before:absolute before:left-0 before:size-full before:content-[''] data-[side=none]:before:-bottom-full",
         className,

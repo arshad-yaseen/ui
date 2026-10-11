@@ -9,7 +9,7 @@ export function ScrollUpArrow({ className, children, ...props }: SelectScrollUpA
     <SelectPrimitive.ScrollUpArrow
       data-slot="select-scroll-up-arrow"
       className={cn(
-        "top-0 z-1 flex h-7 w-full cursor-default items-center justify-center",
+        "top-0 z-1 flex h-(--select-scroll-arrow-height) w-full cursor-default items-center justify-center",
         "bg-background text-neutral-500 dark:text-neutral-400",
         "before:absolute before:left-0 before:size-full before:content-[''] data-[side=none]:before:-top-full",
         className,
