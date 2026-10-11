@@ -12,7 +12,7 @@ export function Popup({ className, ...props }: DialogPopupProps) {
         "py-(--dialog-padding) [--dialog-padding:--spacing(6)]",
         "overflow-y-auto overscroll-contain outline-hidden",
         "rounded-xl bg-background text-sm text-foreground",
-        "shadow-lg ring shadow-black/5 ring-black/10 dark:shadow-black/40 dark:ring-white/10",
+        "shadow-lg ring shadow-black/5 ring-black/10 dark:shadow-black/40 dark:ring-white/8",
         "origin-[50%_calc(var(--dialog-anchor)*100%)] scale-[calc(1-0.05*var(--nested-dialogs))]",
         "transition-[scale,opacity] duration-200 ease-out motion-reduce:transition-none",
         "*:transition-opacity *:duration-200 *:ease-out data-nested-dialog-open:*:opacity-0 motion-reduce:*:transition-none",
