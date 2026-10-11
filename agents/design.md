@@ -169,4 +169,5 @@ Default to stillness. Frequency decides next: an interaction triggered a hundred
 - One knob. If a change needs edits in many components, it belongs in a token.
 - Remove before adding. A weak page usually needs less, arranged better.
 - Check both themes, keyboard only, reduced motion, and a throttled CPU before calling anything done.
+- See every UI change in real browsers. `bun run screenshot <route>` renders it in Chromium, Firefox, and WebKit, read the contact sheet it prints and resolve every problem it reports, and `--help` lists the steps and conditions.
 - Icon only controls carry an `aria-label`, decorative elements are `aria-hidden`, focus stays visible.
