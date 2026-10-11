@@ -13,7 +13,7 @@ export function Popup({ className, ...props }: DialogPopupProps) {
         "overflow-y-auto overscroll-contain outline-hidden",
         "rounded-xl bg-background text-sm text-foreground",
         "shadow-lg ring shadow-black/5 ring-black/10 dark:shadow-black/40 dark:ring-white/8",
-        "origin-top -translate-y-[calc(--spacing(5)*var(--nested-dialogs))] scale-[calc(1-0.05*var(--nested-dialogs))]",
+        "-translate-y-[calc(var(--nested-dialogs)*(--spacing(5)+2.5%))] scale-[calc(1-0.05*var(--nested-dialogs))]",
         "transition-[translate,scale,opacity] duration-200 ease-out motion-reduce:transition-none",
         "data-starting-style:scale-95 data-starting-style:opacity-0 data-nested:data-starting-style:scale-105",
         "data-ending-style:scale-95 data-ending-style:opacity-0 data-ending-style:duration-150 data-nested:data-ending-style:scale-105",
