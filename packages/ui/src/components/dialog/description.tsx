@@ -7,7 +7,7 @@ export function Description({ className, ...props }: DialogDescriptionProps) {
   return (
     <DialogPrimitive.Description
       data-slot="dialog-description"
-      className={cn("text-sm text-pretty text-neutral-600 dark:text-neutral-400", className)}
+      className={cn("text-pretty text-neutral-600 dark:text-neutral-400", className)}
       {...props}
     />
   );
