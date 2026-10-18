@@ -5,7 +5,7 @@ import { cn } from "@arshad/ui/lib/cn";
 const triggerVariants = cva(
   [
     "relative inline-flex min-w-44 items-center justify-between gap-2",
-    "cursor-default rounded-md font-normal whitespace-nowrap select-none",
+    "cursor-pointer rounded-md font-normal whitespace-nowrap select-none",
     "bg-background text-foreground",
     "bg-linear-to-b from-white/85 to-neutral-100/65 dark:from-neutral-800/25 dark:to-neutral-900/25",
     "ring ring-black/8 not-data-disabled:shadow-sm dark:ring-white/10 forced-colors:border",

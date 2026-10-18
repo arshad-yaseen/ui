@@ -124,7 +124,8 @@ Default to stillness. Frequency decides next: an interaction triggered a hundred
 ## Interaction
 
 - **Targets are generous.** A visual target under 24px still gets a 24px hit area, 44px on touch, and the gap between a control and its label is part of the target. No dead zones.
-- **Hover is an enhancement.** Hover styles sit behind `@media (hover: hover)` so touch never sticks in a hovered state, and the cursor agrees with the element: arrow on controls, pointer on links.
+- **Hover is an enhancement.** Hover styles sit behind `@media (hover: hover)` so touch never sticks in a hovered state.
+- **The cursor says what a click does.** Everything clickable shows the pointer, disabled controls show not-allowed, text fields keep the text cursor, and anything a click does nothing to keeps the arrow.
 - **Menus open on press.** Dropdowns trigger on mousedown, not click. The first tooltip in a group waits, its siblings show instantly, and disabled buttons never carry tooltips because keyboard users cannot reach them.
 - **State lives in the URL.** Tabs, filters, pagination, and expanded panels survive refresh, back, forward, and sharing.
 - **Feel instant.** Local actions update optimistically and reconcile with the server, rolling back with feedback on failure. Likely destinations prefetch on hover or focus.
