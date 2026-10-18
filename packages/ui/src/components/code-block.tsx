@@ -1,7 +1,6 @@
 "use client";
 
 import { useRender } from "@base-ui/react/use-render";
-import { useEffect, useRef } from "react";
 import { highlight } from "sugar-high";
 import type { LanguageName, TokenType } from "sugar-high";
 import { cn } from "@arshad/ui/lib/cn";
@@ -10,8 +9,6 @@ export type CodeBlockProps = Omit<useRender.ComponentProps<"div">, "children"> &
   code: string;
   lang?: LanguageName;
 };
-
-const UNLOCK_DELAY = 150;
 
 const DEFAULT_LANG: LanguageName = "typescript";
 
@@ -36,40 +33,14 @@ export function CodeBlock({
   style,
   ...props
 }: CodeBlockProps) {
-  const internalRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const element = internalRef.current;
-    if (!element) {
-      return;
-    }
-
-    let timer = 0;
-    const unlock = () => {
-      element.style.pointerEvents = "";
-    };
-    const handleScroll = () => {
-      element.style.pointerEvents = "none";
-      clearTimeout(timer);
-      timer = window.setTimeout(unlock, UNLOCK_DELAY);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(timer);
-      unlock();
-    };
-  }, []);
-
   return useRender({
     render,
-    ref: [internalRef, ref ?? null],
+    ref,
     props: {
       "data-slot": "code-block",
       ...props,
       className: cn(
-        "max-h-80 overflow-auto rounded-lg p-4 text-sm/6",
+        "overflow-auto rounded-lg p-4 text-sm/6",
         "border-hairline border-current/10",
         "[&_pre]:focus-visible:outline-hidden",
         className,
