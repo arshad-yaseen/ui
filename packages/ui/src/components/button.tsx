@@ -12,10 +12,10 @@ const buttonRecipe = cva(
     "cursor-default touch-manipulation [a]:cursor-pointer",
     "focus:not-focus-visible:outline-hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
     "data-disabled:cursor-not-allowed data-disabled:opacity-50",
-    "transition-[background-color,box-shadow,color,scale] duration-150 motion-reduce:transition-none",
+    "transition-[background-color,box-shadow,color,scale] duration-200 motion-reduce:transition-none",
     "not-data-disabled:active:scale-97 motion-reduce:active:scale-100",
     "*:data-[slot=icon]:-mx-0.5 *:data-[slot=icon]:my-1 *:data-[slot=icon]:shrink-0 *:data-[slot=icon]:self-center",
-    "*:data-[slot=icon]:transition-[color]",
+    "*:data-[slot=icon]:transition-[color] *:data-[slot=icon]:duration-200",
   ],
   {
     variants: {
