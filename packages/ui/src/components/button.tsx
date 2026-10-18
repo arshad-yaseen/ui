@@ -71,12 +71,13 @@ const buttonRecipe = cva(
       {
         variant: "solid",
         color: ["neutral"],
-        className: "inset-shadow-2xs inset-ring inset-shadow-white/6 inset-ring-white/4",
+        className: "inset-shadow-white/6 inset-ring-white/4 dark:inset-shadow-2xs dark:inset-ring",
       },
       {
         variant: "solid",
         color: ["accent", "success", "danger"],
-        className: "inset-shadow-2xs inset-ring inset-shadow-white/15 inset-ring-white/10",
+        className:
+          "inset-shadow-white/15 inset-ring-white/12 dark:inset-shadow-2xs dark:inset-ring",
       },
     ],
     defaultVariants: {
