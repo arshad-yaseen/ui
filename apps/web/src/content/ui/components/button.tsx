@@ -22,11 +22,6 @@ export const button = {
         <Basic />
       </Demo>
 
-      <P>
-        Defaults to <InlineCode>type="button"</InlineCode> so it never submits forms by accident.
-        While pressed it scales to 97%, unless the reader prefers reduced motion.
-      </P>
-
       <H2>Sizes</H2>
       <Demo name="ui/components/button/sizes">
         <Sizes />
