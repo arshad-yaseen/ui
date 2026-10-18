@@ -44,11 +44,7 @@ export function Code({ code }: CodeProps) {
         aria-expanded={isExpanded}
         aria-controls={id}
         onClick={handleToggle}
-        className={cn(
-          "absolute inset-x-0 bottom-4 mx-auto w-fit rounded-full px-3",
-          "[--outline-bg:var(--color-background)]",
-          "hover-open:[--outline-bg:var(--color-neutral-100)] dark:hover-open:[--outline-bg:var(--color-neutral-900)]",
-        )}
+        className="absolute inset-x-0 bottom-4 mx-auto w-fit rounded-full px-3"
       >
         {isExpanded ? "Hide code" : "Show code"}
       </Button>

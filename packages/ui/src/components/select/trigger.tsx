@@ -6,9 +6,10 @@ const triggerVariants = cva(
   [
     "relative inline-flex min-w-44 items-center justify-between gap-2",
     "cursor-default rounded-md font-normal whitespace-nowrap select-none",
-    "bg-transparent text-foreground",
-    "ring ring-black/15 not-data-disabled:shadow-sm dark:ring-white/12 forced-colors:border",
-    "hover-open:bg-neutral-200/50 dark:hover-open:bg-neutral-800/50",
+    "bg-background text-foreground",
+    "bg-linear-to-b from-white/85 to-neutral-100/65 dark:from-neutral-800/25 dark:to-neutral-900/25",
+    "ring ring-black/8 not-data-disabled:shadow-sm dark:ring-white/10 forced-colors:border",
+    "inset-shadow-[0_0_0_100vmax] inset-shadow-transparent hover-open:inset-shadow-black/2 dark:hover-open:inset-shadow-white/1.25",
     "data-disabled:cursor-not-allowed data-disabled:bg-neutral-200/50 data-disabled:opacity-50 dark:data-disabled:bg-neutral-800/50",
     "data-invalid:ring-danger-500/50 dark:data-invalid:ring-danger-500/50",
     "focus:not-focus-visible:outline-hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring data-invalid:focus-visible:outline-danger-500",

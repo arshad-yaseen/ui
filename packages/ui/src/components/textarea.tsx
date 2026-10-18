@@ -4,10 +4,10 @@ import { cn } from "@arshad/ui/lib/cn";
 
 const textareaVariants = cva(
   [
-    "block min-h-16 w-full resize-y rounded-md bg-transparent text-foreground",
-    "ring ring-black/15 enabled:shadow-sm dark:ring-white/12 forced-colors:border",
-    "enabled:not-data-invalid:hover:ring-black/25 dark:enabled:not-data-invalid:hover:ring-white/20",
-    "data-invalid:enabled:hover:ring-danger-500/70",
+    "block min-h-16 w-full resize-y rounded-md text-foreground",
+    "bg-[color-mix(in_oklab,var(--color-white)_65%,var(--color-neutral-50))] dark:bg-[color-mix(in_oklab,var(--color-neutral-900)_35%,var(--color-neutral-950))]",
+    "ring ring-black/8 enabled:shadow-sm dark:ring-white/10 forced-colors:border",
+    "inset-shadow-[0_0_0_100vmax] inset-shadow-transparent enabled:hover:inset-shadow-black/2 dark:enabled:hover:inset-shadow-white/1.25",
     "placeholder:text-neutral-600 dark:placeholder:text-neutral-400",
     "transition-[color,box-shadow] duration-150 motion-reduce:transition-none",
 
