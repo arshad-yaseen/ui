@@ -15,8 +15,8 @@ export function Popup({ className, ...props }: DialogPopupProps) {
         "shadow-lg ring shadow-black/5 ring-black/10 dark:shadow-black/40 dark:ring-white/8",
         "-translate-y-[calc(var(--nested-dialogs)*(--spacing(5)+2.5%))] scale-[calc(1-0.05*var(--nested-dialogs))]",
         "transition-[translate,scale,opacity] duration-200 ease-out motion-reduce:transition-none",
-        "data-starting-style:scale-95 data-starting-style:opacity-0 data-nested:data-starting-style:scale-105",
-        "data-ending-style:scale-95 data-ending-style:opacity-0 data-ending-style:duration-150 data-nested:data-ending-style:scale-105",
+        "data-starting-style:scale-95 data-starting-style:opacity-0 data-nested:data-starting-style:translate-y-[calc(--spacing(5)+2.5%)] data-nested:data-starting-style:scale-105",
+        "data-ending-style:scale-95 data-ending-style:opacity-0 data-ending-style:duration-150 data-nested:data-ending-style:translate-y-[calc(--spacing(5)+2.5%)] data-nested:data-ending-style:scale-105",
         "*:transition-opacity *:duration-200 *:ease-out data-nested-dialog-open:*:opacity-0 motion-reduce:*:transition-none",
         className,
       )}
