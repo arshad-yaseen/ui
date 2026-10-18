@@ -26,7 +26,7 @@ export function Code({ code }: CodeProps) {
     <div
       className={cn(
         "relative rounded-b-xl border-hairline border-t-0 border-current/10 bg-clip-padding",
-        "bg-neutral-100/50 dark:bg-neutral-900/50",
+        "bg-neutral-100/20 dark:bg-neutral-900/20",
       )}
     >
       <CodeBlock
@@ -45,7 +45,7 @@ export function Code({ code }: CodeProps) {
         aria-controls={id}
         onClick={handleToggle}
         className={cn(
-          "absolute inset-x-0 bottom-3 mx-auto w-fit rounded-full px-3",
+          "absolute inset-x-0 bottom-4 mx-auto w-fit rounded-full px-3",
           "[--outline-bg:var(--color-background)]",
           "hover-open:[--outline-bg:var(--color-neutral-100)] dark:hover-open:[--outline-bg:var(--color-neutral-900)]",
         )}

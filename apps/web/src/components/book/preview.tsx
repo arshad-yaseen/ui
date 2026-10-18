@@ -6,7 +6,7 @@ export function Preview({ className, ...props }: ComponentProps<"div">) {
     <div
       {...props}
       className={cn(
-        "flex min-h-64 items-center justify-center rounded-xl border-hairline border-current/10 p-8",
+        "flex min-h-64 items-center justify-center rounded-lg border-hairline border-current/10 p-8",
         className,
       )}
     />
