@@ -2,7 +2,6 @@ import { Basic } from "@/content/ui/components/button/basic";
 import { Sizes } from "@/content/ui/components/button/sizes";
 import { Colors } from "@/content/ui/components/button/colors";
 import { Icons } from "@/content/ui/components/button/icons";
-import { Elevated } from "@/content/ui/components/button/elevated";
 import { Loading } from "@/content/ui/components/button/loading";
 import { AsLink } from "@/content/ui/components/button/as-link";
 import { Demo } from "@/components/book/demo";
@@ -47,14 +46,6 @@ export const button = {
         <Icons />
       </Demo>
 
-      <H2>Elevated</H2>
-      <P>
-        Opt in to <InlineCode>isElevated</InlineCode> for an inset highlight on solid buttons.
-      </P>
-      <Demo name="ui/components/button/elevated">
-        <Elevated />
-      </Demo>
-
       <H2>Loading</H2>
       <P>
         Pass <InlineCode>disabled</InlineCode> and drop a dot matrix loader in as the icon for a
@@ -84,7 +75,6 @@ export const button = {
             default: '"dark/white" when solid, "neutral" otherwise',
           },
           { name: "size", type: '"sm" | "md" | "lg"', default: '"md"' },
-          { name: "isElevated", type: "boolean", default: "false" },
         ]}
       />
       <P>

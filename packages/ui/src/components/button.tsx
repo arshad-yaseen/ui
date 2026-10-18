@@ -66,20 +66,15 @@ const buttonRecipe = cva(
         md: ["min-h-8 px-2.5 py-1 text-sm/6", "*:data-[slot=icon]:size-4"],
         lg: ["min-h-9 px-3 py-1.5 text-sm/6", "*:data-[slot=icon]:size-4.5"],
       },
-      isElevated: {
-        true: "",
-      },
     },
     compoundVariants: [
       {
-        isElevated: true,
         variant: "solid",
         color: ["neutral", "dark/white"],
         className:
           "inset-shadow-2xs inset-ring inset-shadow-black/6 inset-ring-black/4 dark:inset-shadow-white/6 dark:inset-ring-white/4",
       },
       {
-        isElevated: true,
         variant: "solid",
         color: ["accent", "success", "danger"],
         className: "inset-shadow-2xs inset-ring inset-shadow-white/25 inset-ring-white/15",
@@ -113,11 +108,11 @@ export function buttonVariants({ variant, color, ...variants }: ButtonVariants =
 
 export type ButtonProps = ButtonPrimitive.Props & ButtonVariants;
 
-export function Button({ variant, color, size, isElevated, className, ...props }: ButtonProps) {
+export function Button({ variant, color, size, className, ...props }: ButtonProps) {
   return (
     <ButtonPrimitive
       {...props}
-      className={cn(buttonVariants({ variant, color, size, isElevated }), className)}
+      className={cn(buttonVariants({ variant, color, size }), className)}
     />
   );
 }
