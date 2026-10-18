@@ -4,7 +4,6 @@ import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { PropsWithChildren } from "react";
-import { buttonVariants } from "@arshad/ui/components/button";
 import { cn } from "@arshad/ui/lib/cn";
 
 type NavLinkProps<T extends string> = PropsWithChildren<{
@@ -23,13 +22,17 @@ export function NavLink<T extends string>({ href, isExact, children }: NavLinkPr
       href={href}
       aria-current={isCurrent ? "page" : undefined}
       className={cn(
-        buttonVariants({ variant: isActive ? "solid" : "plain", color: "neutral" }),
-        "-mx-2.5 w-[calc(100%+(--spacing(5)))] justify-start",
-        !isActive && [
-          "[--plain-fg:var(--color-neutral-600)] dark:[--plain-fg:var(--color-neutral-400)]",
-          "hover-open:[--plain-fg:var(--color-neutral-900)] dark:hover-open:[--plain-fg:var(--color-white)]",
-          "forced-colors:border-0",
-        ],
+        "-mx-2.5 flex min-h-8 items-center rounded-md px-2.5 py-1 text-sm/6",
+        "focus:not-focus-visible:outline-hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
+        isActive
+          ? [
+              "bg-neutral-200 text-neutral-900 dark:bg-neutral-800 dark:text-white",
+              "forced-colors:border",
+            ]
+          : [
+              "text-neutral-600 dark:text-neutral-400",
+              "hover:bg-neutral-200/50 hover:text-neutral-900 dark:hover:bg-neutral-800/50 dark:hover:text-white",
+            ],
       )}
     >
       {children}
