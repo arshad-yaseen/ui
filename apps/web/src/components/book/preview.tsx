@@ -1,9 +1,14 @@
-import type { PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
+import { cn } from "@arshad/ui/lib/cn";
 
-export function Preview({ children }: PropsWithChildren) {
+export function Preview({ className, ...props }: ComponentProps<"div">) {
   return (
-    <div className="flex min-h-64 items-center justify-center rounded-lg border-hairline border-current/10 p-8">
-      {children}
-    </div>
+    <div
+      {...props}
+      className={cn(
+        "flex min-h-64 items-center justify-center rounded-xl border-hairline border-current/10 p-8",
+        className,
+      )}
+    />
   );
 }
