@@ -4,8 +4,9 @@ import { cn } from "@arshad/ui/lib/cn";
 
 const textareaVariants = cva(
   [
-    "block min-h-16 w-full resize-y rounded-md text-foreground",
-    "bg-[color-mix(in_oklab,var(--color-white)_65%,var(--color-neutral-50))] dark:bg-[color-mix(in_oklab,var(--color-neutral-900)_35%,var(--color-neutral-950))]",
+    "block min-h-16 w-full resize-y rounded-md",
+    "bg-background text-foreground",
+    "bg-linear-to-b from-white to-neutral-100/80 dark:from-neutral-800/28 dark:to-neutral-900/25",
     "ring ring-black/8 enabled:shadow-sm dark:ring-white/10 forced-colors:border",
     "inset-shadow-[0_0_0_100vmax] inset-shadow-transparent enabled:hover:inset-shadow-black/2 dark:enabled:hover:inset-shadow-white/1.25",
     "placeholder:text-neutral-600 dark:placeholder:text-neutral-400",
