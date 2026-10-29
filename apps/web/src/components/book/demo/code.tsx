@@ -25,7 +25,7 @@ export function Code({ code }: CodeProps) {
   return (
     <div
       className={cn(
-        "relative rounded-b-xl border-hairline border-t-0 border-current/10 bg-clip-padding",
+        "relative rounded-b-lg border-hairline border-t-0 border-current/10 bg-clip-padding",
         "bg-neutral-100/20 dark:bg-neutral-900/20",
       )}
     >
