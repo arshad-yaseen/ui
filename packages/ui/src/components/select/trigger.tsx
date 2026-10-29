@@ -12,16 +12,16 @@ const triggerVariants = cva(
     "inset-shadow-[0_0_0_100vmax] inset-shadow-transparent hover-open:inset-shadow-black/2 dark:hover-open:inset-shadow-white/1.25",
     "data-disabled:cursor-not-allowed data-disabled:bg-neutral-200/50 data-disabled:opacity-50 dark:data-disabled:bg-neutral-800/50",
     "data-invalid:ring-danger-500/50 dark:data-invalid:ring-danger-500/50",
-    "focus:not-focus-visible:outline-hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring data-invalid:focus-visible:outline-danger-500",
+    "focus:not-focus-visible:outline-hidden focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-ring data-invalid:focus-visible:outline-danger-500",
     "transition-[background-color,box-shadow,color] duration-200 motion-reduce:transition-none",
     "*:data-[slot=icon]:shrink-0",
   ],
   {
     variants: {
       size: {
-        sm: ["min-h-7 py-0.5 ps-2.5 pe-1.5 text-sm/6", "*:data-[slot=icon]:size-3.5"],
+        sm: ["min-h-7 py-0.5 ps-2 pe-1.5 text-sm/6", "*:data-[slot=icon]:size-3.5"],
         md: ["min-h-8 py-1 ps-2.5 pe-2 text-sm/6", "*:data-[slot=icon]:size-4"],
-        lg: ["min-h-9 py-1.5 ps-2.5 pe-2.5 text-sm/6", "*:data-[slot=icon]:size-4.5"],
+        lg: ["min-h-9 py-1.5 ps-3 pe-2.5 text-sm/6", "*:data-[slot=icon]:size-4.5"],
       },
     },
     defaultVariants: {
