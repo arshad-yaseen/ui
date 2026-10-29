@@ -74,7 +74,7 @@ const buttonRecipe = cva(
       {
         variant: "outline",
         className: [
-          "bg-linear-to-b from-white/85 to-neutral-100/65 dark:from-neutral-800/25 dark:to-neutral-900/25",
+          "bg-linear-to-b from-white to-neutral-100/80 dark:from-neutral-800/28 dark:to-neutral-900/25",
           "inset-shadow-[0_0_0_100vmax] inset-shadow-transparent hover-open:inset-shadow-black/2 dark:hover-open:inset-shadow-white/1.25",
         ],
       },
