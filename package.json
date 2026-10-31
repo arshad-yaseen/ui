@@ -16,14 +16,14 @@
     "screenshot": "bun run --cwd packages/ui screenshot"
   },
   "devDependencies": {
-    "oxfmt": "^0.66.0",
-    "oxlint": "^1.81.0",
-    "turbo": "^2.10.12"
+    "oxfmt": "^0.75.0",
+    "oxlint": "^1.90.0",
+    "turbo": "^2.11.10"
   },
   "devEngines": {
     "packageManager": {
       "name": "bun",
-      "version": "1.4.2"
+      "version": "1.4.4"
     }
   }
 }
