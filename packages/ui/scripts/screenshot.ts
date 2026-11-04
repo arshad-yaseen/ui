@@ -374,6 +374,8 @@ async function capture(shot: Shot, settings: Settings): Promise<Outcome> {
     await page.screenshot({
       path: join(settings.dir, shot.file),
       animations: "disabled",
+      // Hiding the caret writes a style onto text fields, which React reports as a mismatch if it lands before hydration.
+      caret: "initial",
       fullPage: settings.isFullPage && !clip,
       clip,
     });
