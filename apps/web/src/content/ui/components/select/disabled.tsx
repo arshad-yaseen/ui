@@ -11,7 +11,7 @@ export function Disabled() {
     <div className="flex flex-wrap items-center gap-3">
       {/* The whole control is disabled. */}
       <Select.Root items={plans} defaultValue="pro" disabled>
-        <Select.Trigger aria-label="Size">
+        <Select.Trigger aria-label="Plan">
           <Select.Value />
           <Select.Icon />
         </Select.Trigger>
@@ -33,7 +33,7 @@ export function Disabled() {
 
       {/* A single option is disabled. */}
       <Select.Root items={plans} defaultValue="hobby">
-        <Select.Trigger aria-label="Size">
+        <Select.Trigger aria-label="Plan">
           <Select.Value />
           <Select.Icon />
         </Select.Trigger>
