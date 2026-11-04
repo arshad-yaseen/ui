@@ -11,6 +11,7 @@ const triggerVariants = cva(
     "ring ring-black/8 not-data-disabled:shadow-sm dark:ring-white/10 forced-colors:border",
     "inset-shadow-[0_0_0_100vmax] inset-shadow-transparent hover-open:inset-shadow-black/2 dark:hover-open:inset-shadow-white/1.25",
     "data-disabled:cursor-not-allowed data-disabled:bg-neutral-200/50 data-disabled:opacity-50 dark:data-disabled:bg-neutral-800/50",
+    "not-data-disabled:data-readonly:cursor-default",
     "data-invalid:ring-danger-500/50 dark:data-invalid:ring-danger-500/50",
     "focus:not-focus-visible:outline-hidden focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-ring data-invalid:focus-visible:outline-danger-500",
     "transition-[background-color,box-shadow,color] duration-200 motion-reduce:transition-none",
