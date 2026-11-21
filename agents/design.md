@@ -145,8 +145,7 @@ Default to stillness. Frequency decides next: an interaction triggered a hundred
 - **Layouts survive real content.** Short, average, and very long values all render well. In dense surfaces, rows keep one line with `truncate` and the full value lives in a tooltip.
 - **All states are designed.** Empty, sparse, dense, loading, and error are each composed on purpose, and empty states prompt the next action.
 - **No dead ends.** An error says how to fix it, not what failed, and status is never color alone.
-- **Simplify the language, never the claim.** Keep every qualifier, population, period, unit, condition, and comparison basis that changes meaning. A test condition never becomes a broader claim.
-- **Say the supported thing.** A concrete statement beats tiny, huge, fast, or safe. Define an unfamiliar term plainly at first use, then use the exact term consistently.
+- **Simplify the language, never the claim.** Keep every qualifier, population, period, unit, condition, and comparison basis that changes meaning. A test condition never becomes a broader claim. Define an unfamiliar term plainly at first use, then use the exact term consistently.
 - **The page never narrates its making.** No copy about how it was organized or why a representation was chosen. A caption states a takeaway or a limit.
 - **Titles say what happened or what to decide.** Sentence case everywhere. No em dashes.
 - **Icons and media earn their place.** An icon is not decoration and never sits in a colored tile, and a text label wins unless the icon is established and faster. No stock imagery, decorative illustration, fake screenshots, or mandatory hero media.
