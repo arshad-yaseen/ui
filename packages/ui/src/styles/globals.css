@@ -27,6 +27,9 @@
   --text-2xs--letter-spacing: 0.02em;
 
   --radius-md: 0.3125rem;
+
+  --font-serif:
+    "Iowan Old Style BT", "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
 }
 
 @theme inline {
@@ -34,7 +37,6 @@
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
-  --font-serif: var(--font-serif);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
